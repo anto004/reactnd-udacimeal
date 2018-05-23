@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="c5e8d4bb-ba54-4bbd-b0cd-c8c481348584" name="Default" comment="">
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -24,6 +25,10 @@
       <change afterPath="$PROJECT_DIR$/src/utils/api.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/utils/helper.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+=======
+    <list default="true" id="aeb05a04-9163-4d7e-a47a-c3b7dcc1fbd6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+>>>>>>> 08229004a459e2ee95f57c37fbba9a8caef77d0d
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,6 +42,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/actions/index.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -51,11 +57,19 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+=======
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+>>>>>>> 08229004a459e2ee95f57c37fbba9a8caef77d0d
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
@@ -74,11 +88,25 @@
               <caret line="62" column="16" lean-forward="true" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
               <folding>
                 <element signature="e#0#70#0" expanded="true" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/actions/index.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+>>>>>>> 08229004a459e2ee95f57c37fbba9a8caef77d0d
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -93,11 +121,14 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
+=======
+>>>>>>> 08229004a459e2ee95f57c37fbba9a8caef77d0d
     </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -112,6 +143,8 @@
       </list>
     </option>
   </component>
+=======
+>>>>>>> 08229004a459e2ee95f57c37fbba9a8caef77d0d
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
     <package-json value="$PROJECT_DIR$/package.json" />
@@ -123,21 +156,37 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="684" />
     <option name="width" value="596" />
     <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+  <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
+    <option name="width" value="1280" />
+    <option name="height" value="778" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+>>>>>>> 08229004a459e2ee95f57c37fbba9a8caef77d0d
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+>>>>>>> 08229004a459e2ee95f57c37fbba9a8caef77d0d
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
+<<<<<<< HEAD
               <item name="reactnd-udacimeals" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactnd-udacimeals" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -149,16 +198,40 @@
             <path>
               <item name="reactnd-udacimeals" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactnd-udacimeals" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="reactnd-udacimeals-complete" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactnd-udacimeals-complete" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reactnd-udacimeals-complete" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactnd-udacimeals-complete" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reactnd-udacimeals-complete" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactnd-udacimeals-complete" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reactnd-udacimeals-complete" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactnd-udacimeals-complete" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 08229004a459e2ee95f57c37fbba9a8caef77d0d
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="actions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
+<<<<<<< HEAD
               <item name="reactnd-udacimeals" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactnd-udacimeals" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="reactnd-udacimeals-complete" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactnd-udacimeals-complete" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 08229004a459e2ee95f57c37fbba9a8caef77d0d
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
+<<<<<<< HEAD
               <item name="reactnd-udacimeals" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactnd-udacimeals" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
@@ -170,11 +243,21 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
+=======
+              <item name="reactnd-udacimeals-complete" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactnd-udacimeals-complete" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+            </path>
+>>>>>>> 08229004a459e2ee95f57c37fbba9a8caef77d0d
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+>>>>>>> 08229004a459e2ee95f57c37fbba9a8caef77d0d
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -185,6 +268,10 @@
     <property name="node.js.selected.package.prettier" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+<<<<<<< HEAD
+=======
+    <property name="nodejs_package_manager_path" value="npm" />
+>>>>>>> 08229004a459e2ee95f57c37fbba9a8caef77d0d
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -203,6 +290,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="c5e8d4bb-ba54-4bbd-b0cd-c8c481348584" name="Default" comment="" />
       <created>1526596123007</created>
       <option name="number" value="Default" />
@@ -211,10 +299,21 @@
       <workItem from="1526596125485" duration="4540000" />
       <workItem from="1526678251717" duration="3992000" />
       <workItem from="1527026025878" duration="2889000" />
+=======
+      <changelist id="aeb05a04-9163-4d7e-a47a-c3b7dcc1fbd6" name="Default" comment="" />
+      <created>1526415749545</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1526415749545</updated>
+      <workItem from="1526415758245" duration="2554000" />
+      <workItem from="1526488111989" duration="1733000" />
+      <workItem from="1526588792861" duration="2656000" />
+>>>>>>> 08229004a459e2ee95f57c37fbba9a8caef77d0d
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="11421000" />
   </component>
   <component name="ToolWindowManager">
@@ -231,6 +330,24 @@
       <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.30620688" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+=======
+    <option name="totallyTimeSpent" value="6943000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="22" width="1280" height="778" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2494043" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32892805" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32892805" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+>>>>>>> 08229004a459e2ee95f57c37fbba9a8caef77d0d
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -247,6 +364,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/actions/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -313,10 +431,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="41" selection-start-column="41" selection-end-column="41" />
+=======
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+>>>>>>> 08229004a459e2ee95f57c37fbba9a8caef77d0d
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/index.js">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
@@ -339,6 +478,16 @@
           <caret line="62" column="16" lean-forward="true" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
           <folding>
             <element signature="e#0#70#0" expanded="true" />
+=======
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+>>>>>>> 08229004a459e2ee95f57c37fbba9a8caef77d0d
           </folding>
         </state>
       </provider>

@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/reactnd-udacimeals.iml" filepath="$PROJECT_DIR$/.idea/reactnd-udacimeals.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/reactnd-udacimeals-complete.iml" filepath="$PROJECT_DIR$/.idea/reactnd-udacimeals-complete.iml" />
+>>>>>>> 08229004a459e2ee95f57c37fbba9a8caef77d0d
     </modules>
   </component>
 </project>
