@@ -42,9 +42,11 @@ const initialCalendarState = {
 };
 
 const calendar = (state = initialCalendarState, action) => {
-    const {day, recipe, meal} = action;
+    console.log("Calling reducers: ");
+    const {day, meal, recipe} = action;
     switch(action.type){
         case ADD_RECIPE:
+            console.log(ADD_RECIPE);
             return {
                 ...state, //all the other states will remain the same except for [day]
                 [day]: {
