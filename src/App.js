@@ -1,54 +1,94 @@
-import React, { Component } from 'react'
-import { addRecipe } from './actions'
-import RefComponent from "./RefComponent";
+import React, { Component } from 'react';
+import {connect} from "react-redux";
 
 class App extends Component {
-    state = {
-        calendar: null
-    };
-
-    componentDidMount () {
-        const { store } = this.props;
-
-        store.subscribe(() => {
-            this.setState(() => ({
-                calendar: store.getState()
-            }))
-        })
-    }
-
-    submitFood = () => {
-        this.props.store.dispatch(addRecipe( //add recipe takes object as an argument
-            {
-                day: "monday",
-                meal: "breakfast",
-                recipe: {
-                    label: this.input.value
-                }
-            }
-        ))
-    };
-
     render() {
+        console.log("props: ", this.props);
+        const initialCalendarState = {
+            monday: {
+                breakfast: null,
+                lunch: null,
+                dinner: null
+            },
+            tuesday: {
+                breakfast: null,
+                lunch: null,
+                dinner: null
+            },
+            wednesday: {
+                breakfast: null,
+                lunch: null,
+                dinner: null
+            },
+            thursday: {
+                breakfast: null,
+                lunch: null,
+                dinner: null
+            },
+            friday: {
+                breakfast: null,
+                lunch: null,
+                dinner: null
+            },
+            saturday: {
+                breakfast: null,
+                lunch: null,
+                dinner: null
+            },
+            sunday: {
+                breakfast: null,
+                lunch: null,
+                dinner: null
+            }
+        };
+        mapStateToProps(initialCalendarState);
         return (
             <div>
-                <input
-                    type='text'
-                    ref={(input) => this.input = input}
-                    placeholder="Monday's Breakfast"
-                />
-                <button onClick={this.submitFood}>Submit</button>
-
-                <pre>
-                Monday's Breakfast: {this.state.calendar &&
-                    (
-                        this.state.calendar.monday.breakfast
-                    )
-                }
-                </pre>
+               Hello World!
             </div>
         )
     }
 }
 
-export default App
+
+const mapStateToProps = (calendar) => {
+    const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+    return {
+        calendar: days.map((day) => ({
+            day,
+            meals: Object.keys(calendar[day]).reduce((mealAcc, mealItem) => {
+                mealAcc[mealItem] = calendar[day][mealItem]
+                    ? calendar[day][mealItem]
+                    : null;
+                return mealAcc;
+            }, {})
+        }))
+    }
+
+    //Two other ways of getting
+    // {
+    //     day: "monday",
+    //     meals:{
+    //         "breakfast": null,
+    //         "lunch": null,
+    //         "dinner": null
+    //     }
+    // }
+    //Method 1 spread operator
+    // return {
+    //     calendar: days.map((day) => ({
+    //         day,
+    //         meals: {...calendar[day]}
+    //     }))
+    // }
+    //Method 2, cloning the calendar[day] object
+    // return {
+    //     calendar: days.map((day) => ({
+    //         day,
+    //         meals: Object.assign({}, calendar[day])
+    //     }))
+    // }
+
+};
+
+export default connect(mapStateToProps)(App)
