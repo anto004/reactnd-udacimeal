@@ -12,7 +12,7 @@ export const addRecipe = ({day, meal, recipe}) => ({
     recipe
 });
 
-export const removeFormCalendar = ({day, meal}) => ({
+export const removeFromCalendar = ({day, meal}) => ({
     type: REMOVE_FROM_CALENDAR,
     day,
     meal

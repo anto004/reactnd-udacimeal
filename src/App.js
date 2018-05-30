@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
+import {addRecipe, removeFromCalendar} from "./actions";
 
 class App extends Component {
     render() {
@@ -41,7 +42,20 @@ class App extends Component {
                 dinner: null
             }
         };
-        mapStateToProps(initialCalendarState);
+
+        const reducer = (state = {}) => {
+            const day = "monday";
+            const meal = "lunch";
+            const recipe = "pasta";
+            return {
+                ...state,
+                [day]:{
+                    ...state[day],
+                    [meal]: recipe
+                }
+            }
+        };
+        console.log(reducer(initialCalendarState));
         return (
             <div>
                Hello World!
@@ -50,20 +64,24 @@ class App extends Component {
     }
 }
 
+// "pizza":{
+//    INFO
+// }
 
-const mapStateToProps = (calendar) => {
+
+const mapStateToProps = ({calendar, food}) => {
     const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
     return {
         calendar: days.map((day) => ({
             day,
-            meals: Object.keys(calendar[day]).reduce((mealAcc, mealItem) => {
+            meals: Object.keys(calendar[day]).reduce((mealAcc, mealItem) => { // callback
                 mealAcc[mealItem] = calendar[day][mealItem]
-                    ? calendar[day][mealItem]
+                    ? food[calendar[day][mealItem]] //  food[pizza] -> INFO
                     : null;
                 return mealAcc;
-            }, {})
+            }, {}) // starting value
         }))
-    }
+    };
 
     //Two other ways of getting
     // {
@@ -88,7 +106,13 @@ const mapStateToProps = (calendar) => {
     //         meals: Object.assign({}, calendar[day])
     //     }))
     // }
-
 };
 
-export default connect(mapStateToProps)(App)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        selectRecipe: (data) => this.props.dispatch(addRecipe(data)),
+        removeRecipe: (data) => this.props.dispatch(removeFromCalendar(data))
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
