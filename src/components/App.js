@@ -39,8 +39,8 @@ class App extends Component {
         if(!this.input.value){
             return
         }
-
-        e.preventDefault()
+        //TODO: jot down
+        e.preventDefault();
 
         this.setState(() => ({
             loadingFood: true
@@ -82,10 +82,11 @@ class App extends Component {
                             <ul key={day}>
                                 {mealOrder.map((meal) => (
                                     <li key={meal} className="meal">
-                                        {meals[meal]
+                                        {meal[meal]
                                             ? <div className="food-item">
                                                 <img src={meals[meal].image} alt={meals[meal].label}/>
                                                 <button onClick={() => remove({meal, day})}>Clear</button>
+                                                {console.log("meals[meal]:", meals[meal], "day[meal]:", day[meal])}
                                               </div>
                                             :<button className="icon-btn" onClick={() => this.openFoodModal({meal, day})}>
                                                 <CalendarIcon size={30}/>
@@ -96,7 +97,47 @@ class App extends Component {
                         ))}
                     </div>
                 </div>
-
+                <Modal
+                    className="modal"
+                    overlayClassName="overlay"
+                    isOpen={foodModalOpen}
+                    onRequestClose={this.closeFoodModal}
+                >
+                    <div>
+                        {loadingFood === true
+                            ? <Loading delay={200} type="spin" color="#222" className="loading"/>
+                            : <div className="search-container">
+                                    <h3 className="subheader">
+                                        Find a meal for {capitalize(this.state.day)} {this.state.meal}
+                                    </h3>
+                                    <div className="search">
+                                        <input
+                                            className="food-input"
+                                            type="text"
+                                            placeholder="Search Foods"
+                                            ref={(input) => this.input = input}
+                                        />
+                                        <button
+                                            className="icon-btn"
+                                            onClick={this.searchFood}>
+                                            <ArrowRightIcon size={30}/>
+                                        </button>
+                                    </div>
+                                {
+                                    food !== null && (
+                                        <FoodList
+                                            food={food}
+                                            onSelect={(recipe) => {
+                                                selectRecipe({recipe, day: this.state.day, meal: this.state.meal})
+                                                this.closeFoodModal()
+                                            }}
+                                        />
+                                    )
+                                }
+                                </div>
+                        }
+                    </div>
+                </Modal>
             </div>
         )
     }
@@ -105,8 +146,6 @@ class App extends Component {
 // "pizza":{
 //    INFO
 // }
-
-
 const mapStateToProps = ({calendar, food}) => {
     const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
     return {
