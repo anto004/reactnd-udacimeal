@@ -42,10 +42,14 @@ const initialCalendarState = {
     }
 };
 
+//saving recipe as redux state
+//what state is passed here, is it a similar state like initialCalendarState
 const food = (state = {}, action) => {
+    console.log("Calling food reducers: ");
     const {recipe} = action;
     switch(action.type){
         case ADD_RECIPE:
+            console.log("adding new recipe to food state : ", recipe);
             return {
                 ...state,
                 [recipe.label]: recipe
@@ -56,8 +60,9 @@ const food = (state = {}, action) => {
     }
 };
 
+//saving state for a particular day, meal with value, label of the recipe
 const calendar = (state = initialCalendarState, action) => {
-    console.log("Calling reducers: ");
+    console.log("Calling calendar reducers: ");
     const {day, meal, recipe} = action;
     switch(action.type){
         case ADD_RECIPE:

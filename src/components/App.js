@@ -15,8 +15,8 @@ Modal.setAppElement('body');
 class App extends Component {
     state = {
         foodModalOpen: false,
-        meal: null,
         day: null,
+        meal: null,
         food: null,
         loadingFood: false,
         ingredientsModalOpen: false
@@ -25,8 +25,8 @@ class App extends Component {
     openFoodModal = ({meal, day}) => {
         this.setState(() => ({
             foodModalOpen: true,
-            meal,
-            day
+            day,
+            meal
         }))
     };
 
@@ -76,7 +76,7 @@ class App extends Component {
                 breakfast && result.push(breakfast);
                 lunch && result.push(lunch);
                 dinner && result.push(dinner);
-                console.log("result", result);
+                console.log("generate shopping list result", result);
 
                 return result;
             }
@@ -88,8 +88,8 @@ class App extends Component {
     };
     render() {
 
-        const generateTest = this.generateShoppingList();
-        console.log("generateTest",generateTest);
+        // const generateTest = this.generateShoppingList();
+        // console.log("generateTest",generateTest);
 
         const {foodModalOpen, loadingFood, food, ingredientsModalOpen} = this.state; // coming from react state
         const {calendar, remove, selectRecipe} = this.props; // coming from redux
@@ -124,7 +124,7 @@ class App extends Component {
                             <ul key={day}>
                                 {mealOrder.map((meal) => (
                                     <li key={meal} className="meal">
-                                        {meal[meal]
+                                        {meals[meal]
                                             ? <div className="food-item">
                                                 <img src={meals[meal].image} alt={meals[meal].label}/>
                                                 <button onClick={() => remove({meal, day})}>Clear</button>
@@ -186,7 +186,9 @@ class App extends Component {
                     onRequestClose={this.closeIngredientsModal}
                     contentLabel="Modal"
                 >
-                    {ingredientsModalOpen && <ShoppingList list={this.generateShoppingList()}/>}
+                    {ingredientsModalOpen && <ShoppingList
+                                                list={this.generateShoppingList()}
+                                                 name="Antonio"/>}
                 </Modal>
             </div>
         )
@@ -238,17 +240,13 @@ const mapStateToProps = ({calendar, food}) => {
 const mapDispatchToProps = (dispatch) => {
     const addRecipeFunc = (data) => {
         console.log("data", data);
-        const x = addRecipe(data);
-        console.log("addRecipe", x);
-
-        return x;
-    }
+        return addRecipe(data);
+    };
     return {
         selectRecipe: (data) => {
-            console.log(dispatch);
             dispatch(addRecipeFunc(data))
         },
-        removeRecipe: (data) => this.props.dispatch(removeFromCalendar(data))
+        removeRecipe: (data) => dispatch(removeFromCalendar(data))
     }
 };
 
