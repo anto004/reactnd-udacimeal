@@ -1,10 +1,10 @@
 import React,{Component} from "react";
 import PropTypes from "prop-types"
 
-const ShoppingList = ({list, name}) => (
+const ShoppingList = ({list}) => (
     <div className="ingredients-list">
         <h3 className="subheader">
-            Your Shopping List {name}
+            Your Shopping List
         </h3>
         <ul>
             {list.map((item) => (
@@ -19,7 +19,6 @@ const ShoppingList = ({list, name}) => (
 
 ShoppingList.propTypes = {
     list: PropTypes.array.isRequired,
-    name: PropTypes.string.isRequired
 };
 
 export default ShoppingList;

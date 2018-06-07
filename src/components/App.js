@@ -71,7 +71,7 @@ class App extends Component {
     };
 
     generateShoppingList = () => {
-        return this.props.calendar.reduce(((result, {meals}) => {
+        const meals = this.props.calendar.reduce(((result, {meals}) => {
                 const {breakfast, lunch, dinner} = meals;
                 breakfast && result.push(breakfast);
                 lunch && result.push(lunch);
@@ -80,17 +80,19 @@ class App extends Component {
 
                 return result;
             }
-        ), [])
-            .reduce(((ings, {ingredientLines}) => {
-                    ings.concat(ingredientLines)
-                }
-            ), [])
+        ), []);
+
+        console.log("Result ",meals);
+
+        const shoppingList = meals.reduce(((ingredientsAcc, mealItem) => {
+            const ingredients = mealItem.ingredientLines;
+            console.log("ingredients:", ingredients);
+            return ingredientsAcc.concat(ingredients);
+        }), []);
+
+        return shoppingList;
     };
     render() {
-
-        // const generateTest = this.generateShoppingList();
-        // console.log("generateTest",generateTest);
-
         const {foodModalOpen, loadingFood, food, ingredientsModalOpen} = this.state; // coming from react state
         const {calendar, remove, selectRecipe} = this.props; // coming from redux
         const mealOrder = ["breakfast", "lunch", "dinner"];
@@ -186,9 +188,7 @@ class App extends Component {
                     onRequestClose={this.closeIngredientsModal}
                     contentLabel="Modal"
                 >
-                    {ingredientsModalOpen && <ShoppingList
-                                                list={this.generateShoppingList()}
-                                                 name="Antonio"/>}
+                    {ingredientsModalOpen && <ShoppingList list={this.generateShoppingList()}/>}
                 </Modal>
             </div>
         )

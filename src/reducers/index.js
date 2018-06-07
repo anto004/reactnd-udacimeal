@@ -44,12 +44,12 @@ const initialCalendarState = {
 
 //saving recipe as redux state
 //what state is passed here, is it a similar state like initialCalendarState
-const food = (state = {}, action) => {
+const food = (state = {"Dumplings": "Steamed"}, action) => {
     console.log("Calling food reducers: ");
     const {recipe} = action;
     switch(action.type){
         case ADD_RECIPE:
-            console.log("adding new recipe to food state : ", recipe);
+            console.log("Food Reducer State: ", state);
             return {
                 ...state,
                 [recipe.label]: recipe
@@ -66,6 +66,7 @@ const calendar = (state = initialCalendarState, action) => {
     const {day, meal, recipe} = action;
     switch(action.type){
         case ADD_RECIPE:
+            console.log("Calendar Reducer State: ", state);
             return {
                 ...state, //all the other states will remain the same except for [day]
                 [day]: {
